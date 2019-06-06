@@ -1,3 +1,18 @@
+```
+sudo docker build -t saml .
+sudo docker run  -p 8080:8080 -p 8443:8443 -d saml:latest
+```
+
+| UID | Username | Password | Group | Email |
+|---|---|---|---|---|
+| 1 | user1 | user1pass | group1 | user1@example.com |
+| 2 | user2 | user2pass | group2 | user2@example.com |
+
+On Rocket.Chat side, enable SAML and change the custom provider to `test-sp` and the custom issuer to `https://your-rocket-chat/_saml/metadata/test-sp`, then restart the service.
+
+
+
+
 # Docker Test SAML 2.0 Identity Provider (IdP)
 
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/kristophjunge/test-saml-idp.svg)](https://hub.docker.com/r/kristophjunge/test-saml-idp/) [![DockerHub Stars](https://img.shields.io/docker/stars/kristophjunge/test-saml-idp.svg)](https://hub.docker.com/r/kristophjunge/test-saml-idp/) [![GitHub Stars](https://img.shields.io/github/stars/kristophjunge/docker-test-saml-idp.svg?label=github%20stars)](https://github.com/kristophjunge/docker-test-saml-idp) [![GitHub Forks](https://img.shields.io/github/forks/kristophjunge/docker-test-saml-idp.svg?label=github%20forks)](https://github.com/kristophjunge/docker-test-saml-idp) [![GitHub License](https://img.shields.io/github/license/kristophjunge/docker-test-saml-idp.svg)](https://github.com/kristophjunge/docker-test-saml-idp)
